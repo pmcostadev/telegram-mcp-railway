@@ -90,5 +90,5 @@ ENV NODE_ENV=production
 ENV MCP_TELEGRAM_ENABLE_GROUP_CALLS=1
 ENV MCP_TELEGRAM_ENABLE_QUICK_REPLIES=1
 EXPOSE 3000
-VOLUME ["/app/data"]
+# Persistent storage is attached as a Railway volume at /app/data.
 CMD ["bun", "src/server.tsx"]
